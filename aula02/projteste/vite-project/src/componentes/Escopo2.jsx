@@ -1,10 +1,10 @@
-import './Escopo2.css'
-
 function Escopo2(){
-    const label = "Clique Aqui"
-    const label2 = "Clique Aqui e fique fechosa"
 
     function butonclik(){
+        const cor = ['#0000ff', '#ffee00','#5f9ea0','#bb3ba6']
+        const random = cor[Math.floor(Math.random() * cor.length)];
+        document.body.style.backgroundColor = random;
+
         return(
             console.log("você que clicou é muito fechosa")
         )
@@ -13,7 +13,7 @@ function Escopo2(){
     return(
         <>
         <div>
-            <button onClick={butonclik}>{label}</button>
+            <button onClick={butonclik}>mude a cor</button>
         </div>
         </>
     )
