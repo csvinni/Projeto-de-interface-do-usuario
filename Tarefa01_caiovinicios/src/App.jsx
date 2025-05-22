@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Tema from './componentes/Tema.jsx'
+import Galeria from './componentes/Galeria.jsx'
 
-function App() {
-  const [count, setCount] = useState(0)
+const imagens = [
+  { src: "/assets/harry.jpg", nome: 'Harry Potter', descricao: "Harry Potter, o garoto que sobreviveu" },
+  { src: "/assets/hermione.jpg", nome: 'Hermione Granger', descricao: "Hermione Granger, a mente brilhante" },
+  { src: "/assets/malfoy.jpg", nome: 'Draco Malfoy', descricao: "Draco Malfoy, o riquinho chato" },
+  { src: "/assets/ginny.jpg", nome: 'Ginny Weasley', descricao: "Ginny Weasley, a namorada de Harry" },
+  { src: "/assets/rony.jpg", nome: 'Rony Weasley', descricao: "Rony Weasley, o melhor amigo de Harry" },
+  { src: "/assets/voldemort.jpg", nome: 'Voldemort', descricao: "Voldemort, o mais malvado" }
+];
 
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Tema />
+      <Galeria imagens={imagens} />
     </>
-  )
+  );
 }
-
-export default App
