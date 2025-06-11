@@ -1,0 +1,9 @@
+body.escuro{
+    background-color: rgb(5, 5, 5);
+    color: white;
+}
+
+body.claro{
+    background-color: white;
+    color: rgb(5, 5, 5);
+}
