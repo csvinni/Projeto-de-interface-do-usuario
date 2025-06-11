@@ -2,7 +2,7 @@ import cores from './dados'
 import { useState } from 'react';
 
 function MudarCor() {
-    
+  
     const [cor, SetCor] = useState('')
 
     function sortear(){
