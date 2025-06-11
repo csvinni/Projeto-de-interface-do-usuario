@@ -1,14 +1,3 @@
-CAR.JSX:
-
-export default function Car({carro}){
-    return(
-        <div className="carro">
-            <h1>{carro.modelo} : {carro.ano}</h1>
-        </div>
-    )
-}
-CLICK.JSX
-
 import { useState } from "react"
 export default function Click(){
     const [count, setCount] = useState(0)
