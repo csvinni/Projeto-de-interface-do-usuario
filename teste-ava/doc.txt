@@ -1,0 +1,83 @@
+CAR.JSX:
+
+export default function Car({carro}){
+    return(
+        <div className="carro">
+            <h1>{carro.modelo} : {carro.ano}</h1>
+        </div>
+    )
+}
+CLICK.JSX
+
+import { useState } from "react"
+export default function Click(){
+    const [count, setCount] = useState(0)
+
+    if (count > 10){
+        document.getElementsByClassName("mais")[0].style.backgroundColor = 'orange';
+    };
+
+    if (count < 0){
+        document.getElementsByClassName("menos")[0].style.backgroundColor = 'red';
+    }
+
+    return(
+    <div className="card">
+        <button onClick={() => setCount((count) => count + 1)} className="mais">
+        +
+        </button>
+        <h2>{count}</h2>
+        <button onClick={() => setCount((count) => count - 1)} className="menos">
+        -
+        </button>
+    </div>
+    )
+}
+FILTERCAR.JSX
+
+import { carros_lista } from "../dados_carros"
+export default function FilterCar(){
+    const carrosvermelhos = carros_lista.filter(carro => carro.cor === "vermelho")
+
+    return(
+        <div className="carrosverm">
+            {carrosvermelhos.map(carrovermelho => (
+                <h1>{carrovermelho.modelo}</h1>
+            ))}
+        </div>
+    )
+}
+
+<div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+        +
+        </button>
+        <h2>{count}</h2>
+        <button onClick={() => setCount((count) => count - 1)}>
+        -
+        </button>
+      </div>
+
+      APP.JSX
+
+import Click from './components/Click'
+import './App.css'
+import ListCars from './components/ListCars'
+import FilterCar from './components/FilterCar'
+
+function App() {
+
+
+  return (
+    <>
+    <Click></Click>
+    <ListCars></ListCars>
+    <br></br>
+
+    <h1>Carros Vermelhos:</h1>
+    <FilterCar></FilterCar>
+    </>
+  )
+}
+
+export default App
