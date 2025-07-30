@@ -14,8 +14,9 @@ export default function Dados() {
       try {
         const api = await fetch('https://jsonplaceholder.typicode.com/albums');
         const dados = await api.json();
-        const filtro = idFiltro === '' ? dados : dados.filter(post => post.userId === Number(idFiltro));
+        const filtro = idFiltro === '' ? dados : dados.filter(tarefa => tarefa.userId === Number(idFiltro));
         setDadosFiltrados(filtro);
+        
       }
       finally {
         setAtivacao(false);
