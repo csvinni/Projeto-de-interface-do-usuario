@@ -1,0 +1,53 @@
+/* random-color-styles.css */
+
+/* Estilos globais para o body (apenas para transição) */
+body {
+  transition: background-color 0.8s ease; /* Transição mais suave para a cor */
+  font-family: Arial, sans-serif;
+  color: #333; /* Cor do texto padrão */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Para centralizar o container */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Garante que o body ocupa a altura total da viewport */
+}
+
+/* Estilos para o container do componente */
+.color-changer-container {
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%; /* Responsivo */
+}
+
+/* Estilos para o input */
+.color-changer-field {
+  padding: 12px 15px;
+  font-size: 18px;
+  width: calc(100% - 30px); /* 100% menos o padding */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.color-changer-field:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+h1 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 10px;
+}
