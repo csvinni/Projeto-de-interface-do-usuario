@@ -12,7 +12,7 @@ export default function Dados() {
       setAtivacao(true);
 
       try {
-        const api = await fetch('https://jsonplaceholder.typicode.com/albums');
+        const api = await fetch('https://jsonplaceholder.typicode.com/posts');
         const dados = await api.json();
         const filtro = idFiltro === '' ? dados : dados.filter(tarefa => tarefa.userId === Number(idFiltro));
         setDadosFiltrados(filtro);
